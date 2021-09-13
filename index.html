@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="canonical" href="https://prototypical.hexlabs.org">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5">
+    <meta name="format-detection" content="telephone=no">
+    <title>Prototypical, a cardboard make-a-thon</title>
+    <meta name="description"
+        content="Join us for Prototypical, a cardboard make-a-thon, to build fun cardboard prototypes, make great friends, eat free food, collect swag, and win awesome prizes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prototypical.hexlabs.org">
+    <meta property="og:title" content="Prototypical, a cardboard make-a-thon">
+    <meta property="og:description" content="Join us for Prototypical, a cardboard make-a-thon, to build fun cardboard prototypes, make great friends, eat free food, collect swag, and win awesome prizes.">
+    <!-- <meta property="og:image" content="http://jasonxuyang.com/img/og-image.jpg"> -->
+    <!-- <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630"> -->
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
+    <!-- <img src="img/og-image.jpg" id="og" alt="picture"/> -->
+</head>
+
+<style>
+    html {
+        -webkit-text-size-adjust: none;
+        -webkit-font-smoothing: subpixel-antialiased;
+        -webkit-font-smoothing: antialiased;
+        height: 100%;
+        overflow: visible;
+    }
+
+    a, body, button, div,footer,form,h1,h2,h3,header,html,img,input,label,li,nav,p,select,span,table,textarea,ul {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font: inherit;
+        font-family: inherit;
+        font-size: 100%
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Inter Regular'), local('Inter-Regular'),
+            url('./font/Inter-Regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('./font/Inter-Regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Inter Bold'), local('Inter-Bold'),
+            url('./font/Inter-Bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('./font/Inter-Bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    body {
+        font-family: 'Inter Bold', sans-serif;
+        font-weight: 400;
+        background: #ffffff;
+        color: #000000;
+    }
+
+    h1 {
+        display: inline;
+        font-weight: 700;
+        font-size: 3.333vw;
+        margin-bottom: 1.667vw;
+    }
+
+    p, a {
+        margin-bottom: 1.667vw;
+        font-size: 1.667vw;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 60vw;
+        margin-left: 20vw;
+        margin-bottom: 13.889vw;
+        margin-top: 6.944vw;;
+    }
+
+    footer {
+        height: 1px;
+    }
+
+    #sidebar {
+        position: sticky;
+        top: 0;
+        right: 0;
+        align-items: center;
+        width: 10vw;
+        height: 100vh;
+        margin-top: -100vh;
+    }
+
+    #line {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: 0;
+        width: 2px;
+    }
+
+    #logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-90deg);
+        height: 3vw;
+    }
+
+    #register {
+        display: inline-block;
+        padding: 1.111vw 2.222vw;
+        font-weight: 700;
+        background-color: #E98C00;
+        color: #ffffff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    #register:hover {
+        background-color: #000000;
+    }
+
+    #schedule {
+        /* border-left: solid 4px #E98C00;
+        padding-left: 64px; */
+    }
+
+    .orange {
+        color: #E98C00;
+    }
+
+    .no-margin {
+        margin-bottom: 0;
+    }
+
+    .margin-64px {
+        margin-bottom: 3.333vw;
+    }
+
+    .schedule-date {
+        font-size: 1.667vw;
+        font-weight: 700;
+        color: #E98C00;
+        margin-bottom: 0.556vw;
+    }
+
+    .schedule-content {
+        font-weight: 700;
+    }
+
+    .schedule-item {
+        margin-bottom: 3.333vw;
+    }
+
+    .schedule-item:last-child, .schedule-item p:last-child {
+        margin-bottom: 0;
+    }
+
+    .faq-item {
+        margin-bottom: 3.333vw; 
+    }
+
+    .faq-question {
+        font-weight: 700;
+    }
+
+    .faq-answer {
+
+    }
+
+    .faq-item:last-child, .faq-item p:last-child {
+        margin-bottom: 0;
+    }
+
+    .icon {
+        width: 6.667vw;
+        border: solid 8px #000000;
+        padding: 1.389vw;
+        margin-bottom: 2.222vw;
+    }
+
+    @media screen and (max-width: 960px) {
+        h1 {
+            font-size: 5vw;
+        }
+
+        p, a {
+            font-size: 2.5vw;
+        }
+
+        .schedule-date {
+            font-size: 2.083vw;
+        }
+        
+        section {
+            margin-left: 20vw;
+            width: 70vw;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        h1 {
+            font-size: 8.533vw;
+            margin-bottom: 4.267vw;
+        }
+
+        p, a {
+            font-size: 4.267vw;
+            margin-bottom: 3.2vw;
+        }
+
+        section {
+            margin-top: 13.333vw;
+            margin-bottom: 26.667vw;
+        }
+
+        #register {
+            margin-top: 4.267vw;
+            padding: 3.2vw 4.267vw;
+        }
+
+        .schedule-item, .faq-item {
+            margin-bottom: 6.4vw;
+        }
+
+        .schedule-date {
+            font-size: 3.733vw;
+        }
+
+        .icon {
+            width: 19.2vw;
+            border: solid 6px #000000;
+            margin-bottom: 8.533vw;
+        }
+    }
+
+</style>
+
+<body>
+    <div>
+        <div id='sidebar'>
+            <img id='logo' src='./asset/logo.svg'/>
+            <img id='line' src='./asset/line.svg'/>
+            <!-- <div id='sidebar-content'>
+                <img id='line' src='./line.svg'/>
+            </div> -->
+        </div>
+        <section id='section-hero'>
+            <img class='icon' src='./asset/icon-handle-with-care.jpg' alt='Two hands handling a box with care.'/>
+            <p>Saturday, September 25, 10AM - 7PM at MoSE</p>
+            <h1 class='no-margin'>Get Ready to</h1>
+            <h1 class='orange'>Think Outside the Box</h1>
+            <p>Join us for Prototypical, a cardboard make-a-thon, to build fun cardboard prototypes, make great friends, eat free food, collect swag, and win awesome prizes.</p>
+            <a id='register'>Register</a>
+        </section>
+
+        <section id='section-info'>
+            <img class='icon' src='./asset/icon-this-way-up.jpg' alt='Two arrow coming from the ground pointing upwards.'/>
+            <h1 class='orange no-margin'>Prototypical:</h1>
+            <h1>A Make-A-Thon for the Engineer Within Us</h1>
+            <p>We are all born with a fascination and excitment to imagine, design, and build the never-before-seen. Embrace your inner engineer and think outside the box for HexLab’s first cardboard prototyping make-a-thon.</p>
+        </section>
+
+        <section id='section-schedule'>
+            <img class='icon' src='./asset/icon-sack-truck.jpg' alt='A rolling trolley holding two boxes.'/>
+            <h1>Schedule</h1>
+            <div id='schedule'>
+                <div class='schedule-item'>
+                    <p class='schedule-date'>10:00 AM - 10:30 AM</p>
+                    <p class='schedule-content'>Check-In</p>
+                </div>
+                <div class='schedule-item'>
+                    <p class='schedule-date'>10:30 AM  - 11:00 AM</p>
+                    <p class='schedule-content'>Opening Ceremony</p>
+                </div>
+                <div class='schedule-item'>
+                    <p class='schedule-date'>11:00 AM - 12:00 PM</p>
+                    <p class='schedule-content'>Lunch</p>
+                </div>
+                <div class='schedule-item'>
+                    <p class='schedule-date'>11:30 AM - 12:00 PM</p>
+                    <p class='schedule-content'>Featured Speaker</p>
+                </div>
+                <div class='schedule-item'>
+                    <p class='schedule-date'>12:00 PM - 12:30 PM</p>
+                    <p class='schedule-content'>Design Thinking Workshop</p>
+                </div>
+                <div class='schedule-item'>
+                    <p class='schedule-date'>01:00 PM - 01:45 PM</p>
+                    <p class='schedule-content'>Workshop 1: Package Design</p>
+                </div>
+                <div class='schedule-item'>
+                    <p class='schedule-date'>03:00 PM - 03:30 PM</p>
+                    <p class='schedule-content'>Mini Event 1: Paper Airplane Competition</p>
+                </div>
+                <div class='schedule-item'>
+                    <p class='schedule-date'>03:00 PM - 03:30 PM</p>
+                    <p class='schedule-content'>Mini Event 2: Packaging Competition</p>
+                </div>
+                <div class='schedule-item'>
+                    <p class='schedule-date'>05:00 PM - 06:00 PM</p>
+                    <p class='schedule-content'>Judging</p>
+                </div>
+                <div class='schedule-item'>
+                    <p class='schedule-date'>06:00 PM - 06:30 PM</p>
+                    <p class='schedule-content'>Swag Collection</p>
+                </div>
+            </div>
+        </section>
+
+        <section id='section-faq'>
+            <img class='icon' src='./asset/icon-tidyman.jpg' alt='A man throwing away a piece of paper into a trashcan.'/>
+            <h1 class='margin-64px'>Frequently Asked Questions</h1>
+            <div class='faq-item'>
+                <p class='faq-question'>1. What is Prototypical?</p>
+                <p class='faq-answer'>Prototypical is HexLab's newest event for engineers and designers.</p>
+            </div>
+            <div class='faq-item'>
+                <p class='faq-question'>2. When is Prototypical?</p>
+                <p class='faq-answer'>Saturday, September 25, 2021 10AM - 7PM</p>
+            </div>
+            <div class='faq-item'>
+                <p class='faq-question'>3. Where is Prototypical?</p>
+                <p class='faq-answer'>Molecular Science and Engineering Building (MoSE)—901 Atlantic Dr NW, Atlanta, GA 30318</p>
+            </div>
+            <div class='faq-item'>
+                <p class='faq-question'>4. What happens at Prototypical? </p>
+                <p class='faq-answer'>Participants may attend workshops, join us for mini-events, and compete for prizes by creating original cardboard prototypes.</p>
+            </div>
+            <div class='faq-item'>
+                <p class='faq-question'>5.  Are materials and supplies provided? </p>
+                <p class='faq-answer'>We will provide box cutters, x-acto knives, cutting mats, tape, and hot glue for each team. We have also partnered with the Hive and Invention Studio; participants may use any machinery or supplies at these makerspaces for their projects.</p>
+            </div>
+            <div class='faq-item'>
+                <p class='faq-question'>6. Will there be prizes?</p>
+                <p class='faq-answer'>Yes, there will be prizes for the top teams and raffle prizes for all participants.</p>
+            </div>
+            <div class='faq-item'>
+                <p class='faq-question'>7.  How many people are needed to form a team?</p>
+                <p class='faq-answer'>We accept teams of up to 4 people.</p>
+            </div>
+            <div class='faq-item'>
+                <p class='faq-question'>8. Does it cost money to sign up? </p>
+                <p class='faq-answer'>No, this is a free event.</p>
+            </div>
+            <div class='faq-item'>
+                <p class='faq-question'>9. Will there be swag?</p>
+                <p class='faq-answer'>All participants will receive swag while supplies last.</p>
+            </div>
+            <div class='faq-item'>
+                <p class='faq-question'>10. Will there be food?</p>
+                <p class='faq-answer'>Yes, we will be serving lunch during the event</p>
+            </div>
+        </section>
+        <footer>
+            
+        </footer>
+    </div>
+</body>
+
+</html>
