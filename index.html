@@ -65,7 +65,7 @@
     }
 
     h1 {
-        display: inline;
+        display: block;
         font-weight: 700;
         font-size: 3.333vw;
         margin-bottom: 1.667vw;
@@ -77,19 +77,55 @@
     }
 
     section {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
         width: 60vw;
         margin-left: 20vw;
         margin-bottom: 13.889vw;
-        margin-top: 6.944vw;;
+        margin-top: 6.944vw;
     }
 
     footer {
-        height: 1px;
+        display: flex;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        background-color: #000000;
+        color: #ffffff;
+        height: 100vh;
     }
+
+    #logo-hexlabs {
+        width: 15vw;
+        margin-top: 4.444vw;
+    }
+
+    ul {
+        margin-top: 1.667vw;
+        list-style: none;
+    } 
+    
+    li {
+        display: block;
+        margin-bottom: 1.389vw;
+        font-size: 1.389vw;
+    }
+
+    li:last-child {
+        margin-bottom: 0;
+    }
+
+    #footer-content {
+        margin-top: 10vw;
+    }
+
+    footer a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        color: #E98C00;
+        text-decoration: underline;
+    }
+
 
     #sidebar {
         position: sticky;
@@ -149,7 +185,7 @@
     }
 
     .schedule-date {
-        font-size: 1.667vw;
+        font-size: 1.389vw;
         font-weight: 700;
         color: #E98C00;
         margin-bottom: 0.556vw;
@@ -208,6 +244,15 @@
             margin-left: 20vw;
             width: 70vw;
         }
+
+        #logo-hexlabs {
+            width: 25vw;
+            margin-top: 8.888vw
+        }
+        
+        li {
+            font-size: 2.083vw;
+        }
     }
 
     @media screen and (max-width: 400px) {
@@ -243,6 +288,24 @@
             width: 19.2vw;
             border: solid 6px #000000;
             margin-bottom: 8.533vw;
+        }
+
+        #footer-content {
+            margin-top: 20vw;
+        }
+
+        #logo-hexlabs {
+            width: 50vw;
+            margin-top: 20vw;
+        }
+
+        ul {
+            margin-top: 4.267vw;
+        }
+        
+        li {
+            font-size: 3.733vw;
+            margin-bottom: 3.2vw;
         }
     }
 
@@ -365,7 +428,17 @@
             </div>
         </section>
         <footer>
-            
+            <div id='footer-content'>
+                <h1>Made with &#9829; from Hexlabs</h1>
+                <ul>
+                    <li><a href="https://hexlabs.org/">About Hexlabs</a></li>
+                    <li><a href="https://www.instagram.com/thehexlabs/?hl=en">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/TheHexLabs">Facebook</a></li>
+                    <li><a href="https://twitter.com/thehexlabs?lang=en">Twitter</a></li>
+                    <li><a href="https://github.com/HackGT">Github</a></li>
+                </ul>
+                <a href="https://hexlabs.org/"><img id='logo-hexlabs' src='./asset/hexlabs-logo.svg' alt='hexlabs logo'/></a>
+            </div>
         </footer>
     </div>
 </body>
